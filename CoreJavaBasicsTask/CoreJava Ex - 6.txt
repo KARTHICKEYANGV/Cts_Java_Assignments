@@ -1,0 +1,20 @@
+package com.assignments;
+
+public class ArithmeticOperations {
+
+	public static void main(String[] args) {
+		int num1 = 125;
+		int num2 = 24;
+		int sum = num1+num2;
+		System.out.println(num1+" + "+num2+" = "+sum);
+		int diff = num1-num2;
+		System.out.println(num1+" - "+num2+" = "+diff);
+		int mul = num1*num2;
+		System.out.println(num1+" * "+num2+" = "+mul);
+		int div = num1/num2;
+		System.out.println(num1+" / "+num2+" = "+div);
+		int mod = num1%num2;
+		System.out.println(num1+" % "+num2+" = "+mod);
+	}
+
+}

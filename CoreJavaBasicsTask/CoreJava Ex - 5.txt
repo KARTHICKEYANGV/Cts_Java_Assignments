@@ -1,0 +1,30 @@
+package com.assignments;
+import java.util.*;
+
+public class TakeInput {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter empid: ");
+		int empid = sc.nextInt();
+		System.out.println("Enter empName: ");
+		String empName = sc.next();
+		System.out.println("Enter empSal: ");
+		int empSal = sc.nextInt();
+		System.out.println("E"
+				+ "nter empAdd: ");
+		int empAdd = sc.nextInt();
+		System.out.println("Enter empGender: ");
+		String gender = sc.next();
+		System.out.println("Enter empEmail: ");
+		String email = sc.next();
+		sc.close();
+		
+		System.out.println("Empid: "+empid);
+		System.out.println("EmpName: "+empName);
+		System.out.println("EmpSal: "+empSal);
+		System.out.println("EmpAdd: "+empAdd);
+		System.out.println("Gender: "+gender);
+		System.out.println("Email: "+email);
+		
+	}
+}
