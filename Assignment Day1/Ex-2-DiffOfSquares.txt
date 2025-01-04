@@ -1,0 +1,32 @@
+package com.assignments;
+
+public class DifferenceSumOfSquares {
+	static int sum1 = 0;
+	static int sum2 = 0;
+	public static int sumOfSquares(int n) {
+		for(int i=1; i<=n; i++) {
+			int res = i*i;
+			sum1+=res;
+		}
+		return sum1;
+	}
+	
+	public static int squareOfSums(int n) {
+		for(int i=1;i<=n;i++) {
+			sum2 += i;
+		}
+		return sum2*sum2;
+	}
+	
+	public static int difference(int a,int b) {
+		return a-b;
+	}
+	
+	
+	public static void main(String[] args) {
+		int n = 10;
+		int sumOfSq = DifferenceSumOfSquares.sumOfSquares(n);
+		int sqOfSum = DifferenceSumOfSquares.squareOfSums(n);
+		System.out.println(DifferenceSumOfSquares.difference(sumOfSq,sqOfSum));
+	}
+}

@@ -1,0 +1,19 @@
+package com.assignments;
+
+public class FindMin {
+	
+	public static int findMin(int num1,int num2,int num3) {
+		int min = Integer.MIN_VALUE;
+		if(num1 < num2) min = num1;
+		else min = num2;
+		if(min < num3) return min;
+		else return num3;
+	}
+	
+	public static void main(String[] args) {
+		int num1 = 12;
+		int num2 = 13;
+		int num3 = 14;
+		System.out.println(FindMin.findMin(num1,num2,num3));
+	}
+}
