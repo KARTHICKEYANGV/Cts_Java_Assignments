@@ -1,0 +1,24 @@
+package com.cts;
+
+public class MultilevelInheritance {
+	
+	public void parent() {
+		System.out.println("Parent class");
+	}
+	public static void main(String[] args) {
+		
+		Child2 ch = new Child2();
+		ch.parent();
+	}
+
+}
+
+class Child1 extends MultilevelInheritance{
+	
+	
+}
+
+class Child2 extends Child1{
+	
+	
+}

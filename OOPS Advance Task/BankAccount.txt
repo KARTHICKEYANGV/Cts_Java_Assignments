@@ -1,0 +1,112 @@
+package com.cts;
+
+public class AccountSettings {
+	
+	public long accNum;
+	public double balance;
+	public Person accHolder;
+	
+	public void deposit(double bal) {
+		balance+=bal;
+	}
+	
+	
+	public void withdraw(double bal){
+		double res = balance-bal;
+		if(res <= 500) {
+			System.out.println("Minimum balance cannot be deducted");
+			return;
+		}
+		balance-=bal;
+	}
+	
+	public double getBalance() {
+		return balance;
+	}
+
+	public long getAccNum() {
+		return accNum;
+	}
+
+	public void setAccNum(long accNum) {
+		this.accNum = accNum;
+	}
+
+	public Person getAccHolder() {
+		return accHolder;
+	}
+
+	public void setAccHolder(Person accHolder) {
+		this.accHolder = accHolder;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+	
+	public static void main(String[] args) {
+		Person smith = new Person();
+		smith.setName("smith");
+		smith.setBalance(2000);
+		Person kathy = new Person();
+		kathy.setName("Kathy");
+		kathy.setBalance(3000);
+		smith.deposit(2000);
+		kathy.withdraw(2000);
+		SavingsAccount savings = new SavingsAccount();
+		savings.withdraw(1000);
+		System.out.println("Smith balance: "+smith.balance);
+		System.out.println("Kathy balance: "+kathy.balance);
+		
+	
+
+}
+}
+
+class Person extends AccountSettings{
+	String Name;
+	float age;
+	public String getName() {
+		return Name;
+	}
+	public void setName(String name) {
+		Name = name;
+	}
+	public float getAge() {
+		return age;
+	}
+	public void setAge(float age) {
+		this.age = age;
+	}
+	
+}
+
+class SavingsAccount extends AccountSettings{
+	final int minimumBalance = 500;
+	
+	
+	
+	@Override
+	public void withdraw(double bal) {
+		double res = balance - bal;
+		if(res <= 500) {
+			System.out.println("Cannot deduct from minimum balance");
+			return;
+		}
+		balance-=bal;
+		
+	}
+}
+
+class CurrentAccount extends AccountSettings{
+	double overdraftLimit = 500;
+	@Override
+	public void withdraw(double bal) {
+		double res = balance - bal;
+		if(res <= 500) {
+			System.out.println("true");
+			
+		}
+		
+	}
+}

@@ -1,0 +1,62 @@
+package com.cts;
+
+public class Calculator {
+	
+	public static void main(String[] args) {
+		Calculator calc = new Calculator();
+		calc.add(10,10);
+		calc.add(1.0,1.0);
+		calc.add(1,1.0);
+		calc.add(1.0,1);
+		calc.dif(10,10);
+		calc.dif(1.0,1.0);
+		calc.dif(1,1.0);
+		calc.dif(1.0,1);
+		calc.mul(10,10);
+		calc.mul(1.0,1.0);
+		calc.mul(1,1.0);
+		calc.mul(1.0,1);
+		calc.div(10,10);
+		calc.div(1.0,1.0);
+		calc.div(1,1.0);
+		calc.div(1.0,1);
+		
+	}
+
+	private void div(double d, double e) {
+		// TODO Auto-generated method stub
+		System.out.println(d/e);
+		
+	}
+
+	private void div(int i, int j) {
+		System.out.println(i/j);
+		
+	}
+
+	private void mul(double d, double e) {
+		System.out.println(d*e);
+		
+	}
+
+	private void mul(int i, int j) {
+		System.out.println(i*j);
+		
+	}
+
+	private void dif(double d, double e) {
+		System.out.println(d-e);
+		
+	}
+
+	private void add(double d, double e) {
+		System.out.println(d+e);
+		
+	}
+
+	private void add(int i, int j) {
+		System.out.println(i+j);
+		
+	}
+
+}

@@ -1,0 +1,47 @@
+package com.cts;
+
+public class Vehicle {
+
+	public void wheels() {
+		System.out.println("Vehicle Class");
+	}
+}
+
+class Truck extends Vehicle{
+	public void truck() {
+		System.out.println("Truck class");
+	}
+	
+}
+
+class Bus extends Vehicle{
+	public void bus() {
+		System.out.println("Bus class");
+	}
+	
+}
+
+class Car extends Vehicle{
+	public void car() {
+		System.out.println("Car class");
+	}
+	
+}
+
+package com.cts;
+
+public class Road {
+
+	public static void main(String[] args) {
+		Truck tr = new Truck();
+		Bus bs = new Bus();
+		Car cr = new Car();
+		
+		tr.wheels();
+		tr.truck();
+		bs.bus();
+		cr.car();
+
+	}
+
+}

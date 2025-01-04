@@ -1,0 +1,54 @@
+package com.cts;
+
+public class MemberClass {
+	public String name;
+	public int age;
+	public long phoneNumber;
+	public int salary;
+	public String address;
+	
+	public void printSalary() {
+		System.out.println(salary);
+	}
+	
+	
+	public static void main(String[] args) {
+		Employee emp = new Employee("Employee1",22,912345890,22000,"Hyderabad");
+		emp.printSalary();
+		Manager mng = new Manager("Manager1",32,912898890,220000,"Hyderabad");
+		mng.printSalary();
+	}
+
+}
+
+class Employee extends MemberClass{
+	public Employee(String name,int age,long phoneNumber,int salary,String address){
+		this.age = age;
+		this.name = name;
+		this.phoneNumber = phoneNumber;
+		this.salary = salary;
+		this.address = address;
+		System.out.println("Name: "+name+" Age: "+age+" Phone: "+phoneNumber+" Address: "+address+" ");
+	}
+	
+	@Override
+	public void printSalary() {
+		System.out.println("Salary: "+salary);
+	}
+}
+
+class Manager extends MemberClass{
+	public Manager(String name,int age,long phoneNumber,int salary,String address){
+		this.age = age;
+		this.name = name;
+		this.phoneNumber = phoneNumber;
+		this.salary = salary;
+		this.address = address;
+		System.out.println("Name: "+name+" Age: "+age+" Phone: "+phoneNumber+" Address: "+address+" ");
+	}
+	
+	@Override
+	public void printSalary() {
+		System.out.println("Salary: "+salary);
+	}
+}

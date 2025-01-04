@@ -1,0 +1,168 @@
+package com.assignments;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		Book book1 = new Book();
+		JournalPaper paper1 = new JournalPaper();
+		Video video1 = new Video();
+		CD cd1 = new CD();
+		System.out.println(book1.getTitle());
+		System.out.println(paper1.getTitle());
+		System.out.println(video1.getTitle());
+		System.out.println(cd1.getTitle());
+	}
+
+}
+
+abstract class Item {
+	private int indentificationNumber;
+	private String title;
+	private int numberOfCopies;
+	public int getIndentificationNumber() {
+		return indentificationNumber;
+	}
+	public void setIndentificationNumber(int indentificationNumber) {
+		this.indentificationNumber = indentificationNumber;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public int getNumberOfCopies() {
+		return numberOfCopies;
+	}
+	public void setNumberOfCopies(int numberOfCopies) {
+		this.numberOfCopies = numberOfCopies;
+	}
+	
+	
+	
+}
+
+abstract class WrittenItem extends Item{
+	private String author;
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	
+}
+
+class Book extends WrittenItem{
+	public Book() {
+		setAuthor("Tolstoy");
+		setIndentificationNumber(1);
+		setTitle("JungleBook");
+		setNumberOfCopies(10);
+		
+	}
+	
+}
+
+class JournalPaper extends WrittenItem{
+	
+	private int yearPublished;
+
+	public int getYearPublished() {
+		return yearPublished;
+	}
+
+	public void setYearPublished(int yearPublished) {
+		this.yearPublished = yearPublished;
+	}
+	
+	public JournalPaper() {
+		setAuthor("Karthi");
+		setIndentificationNumber(2);
+		setTitle("AI and Ds Journal");
+		setNumberOfCopies(10);
+		setYearPublished(2024);
+	}
+	
+}
+
+abstract class MediaItem extends Item{
+	private int runTime;
+
+	public int getRunTime() {
+		return runTime;
+	}
+
+	public void setRunTime(int runTime) {
+		this.runTime = runTime;
+	}
+	
+	
+}
+
+class Video extends MediaItem{
+	private String director;
+	private String genre;
+	private int yearReleased;
+	public String getDirector() {
+		return director;
+	}
+	public void setDirector(String director) {
+		this.director = director;
+	}
+	public String getGenre() {
+		return genre;
+	}
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+	public int getYearReleased() {
+		return yearReleased;
+	}
+	public void setYearReleased(int yearReleased) {
+		this.yearReleased = yearReleased;
+	}
+	
+	public Video() {
+		setIndentificationNumber(3);
+		setTitle("Movie@Best");
+		setNumberOfCopies(10);
+		setRunTime(30);
+		setDirector("Balachandar");
+		setGenre("LifeScience");
+		setYearReleased(2003);
+		
+		
+	}
+	
+}
+
+class CD extends MediaItem{
+	private String artist;
+	private String genre;
+	public String getArtist() {
+		return artist;
+	}
+	public void setArtist(String artist) {
+		this.artist = artist;
+	}
+	public String getGenre() {
+		return genre;
+	}
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+	
+	public CD() {
+		setIndentificationNumber(4);
+		setTitle("2002Hits");
+		setNumberOfCopies(10);
+		setRunTime(30);
+		setArtist("AR Rahman");
+		setGenre("Classic");
+	}
+	
+	
+}

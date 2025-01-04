@@ -1,0 +1,32 @@
+package com.cts;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		Shape shape = new Shape();
+		shape.area(5);
+		shape.area(5, 5);
+		shape.perimeter(5);
+		shape.perimeter(5,5);
+	}
+
+}
+
+package com.cts;
+
+public class Shape {
+
+	public void area(int l) {
+		System.out.println(l*l);
+	}
+	public void area(int l,int b) {
+		System.out.println(l*b);
+	}
+	public void perimeter(int l) {
+		System.out.println(4*l);
+	}
+	public void perimeter(int l,int b) {
+		System.out.println(2*(l+b));
+	}
+	
+}

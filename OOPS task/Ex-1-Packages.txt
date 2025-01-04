@@ -1,0 +1,49 @@
+package com.shapes;
+
+public class Circle {
+	
+	public void circleShape() {
+		System.out.println("Circle Shape");
+	}
+
+}
+
+package com.shapes;
+
+public class Square {
+	
+	public void squareShape() {
+		System.out.println("Square shape");
+	}
+
+}
+
+package com.shapes;
+
+public class Triangle {
+	
+	public void triangleShape() {
+		System.out.println("Triangle Shape");
+	}
+
+}
+
+package com.cts;
+import com.shapes.*;
+
+public class TestShapes {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Circle circle = new Circle();
+		Triangle triangle = new Triangle();
+		Square square = new Square();
+		
+		circle.circleShape();
+		triangle.triangleShape();
+		square.squareShape();
+		
+
+	}
+
+}
