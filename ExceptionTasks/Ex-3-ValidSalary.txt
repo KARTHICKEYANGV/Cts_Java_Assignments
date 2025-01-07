@@ -1,0 +1,29 @@
+package com.demo.exception;
+
+class SalaryException extends Exception{
+	public SalaryException(String msg) {
+		super(msg);
+	}
+}
+
+public class ValidSalary {
+	
+	public void validSalary(int salary)throws SalaryException{
+		if(salary < 3000) {
+			throw new SalaryException("Salary below 3000 is invalid");
+		}
+		System.out.println("Valid Salary");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ValidSalary obj = new ValidSalary();
+		try {
+		obj.validSalary(8000);
+		}
+		catch(SalaryException e){
+			System.out.println(e.getMessage());
+		}
+	}
+
+}

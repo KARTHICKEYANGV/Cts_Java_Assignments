@@ -1,0 +1,31 @@
+package com.assignments;
+
+class AgeException extends Exception{
+	public AgeException(String msg) {
+		super(msg);
+	}
+}
+
+public class ValidAge {
+	public static int age = 15;
+	
+	public void validAge(int age)throws AgeException{
+		if(age<=15) {
+			throw new AgeException("Age should be greater than 15");
+		}
+		System.out.println("Valid age");
+	}
+
+	public static void main(String[] args) {
+		ValidAge obj = new ValidAge();
+		// TODO Auto-generated method stub
+		try {
+			obj.validAge(age);
+		}
+		catch(AgeException e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+
+}

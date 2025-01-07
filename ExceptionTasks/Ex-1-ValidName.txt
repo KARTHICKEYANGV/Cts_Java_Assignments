@@ -1,0 +1,32 @@
+package com.assignments;
+
+class NameException extends Exception{
+	public NameException(String msg) {
+		super(msg);
+	}
+}
+
+public class FullName {
+	public static String firstName = "";
+	public static String lastName = "";
+	
+	public void validName(String firstName,String lastName)throws NameException{
+		if(firstName.length()==0 || lastName.length()==0) {
+			throw new NameException("Names cannot be blank");
+		}
+		System.out.println("Valid Name");
+	}
+
+	public static void main(String[] args) {
+		FullName obj = new FullName();
+		// TODO Auto-generated method stub
+		try {
+			obj.validName(firstName,lastName);
+		}
+		catch(NameException e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+
+}
