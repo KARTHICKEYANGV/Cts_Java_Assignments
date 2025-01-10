@@ -1,0 +1,11 @@
+package com.assignments;
+
+public class GetChar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "Karthi";
+		System.out.println(str.charAt(3));
+	}
+
+}

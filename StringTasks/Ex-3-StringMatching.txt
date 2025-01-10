@@ -1,0 +1,18 @@
+package com.assignments;
+
+public class MatchingSequence {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String regex = "java standard edition";
+		String str = "java standard edition";
+		if(regex.matches(str)) {
+			System.out.println("The String matches");
+		}
+		else {
+			System.out.println("The String not matches");
+		}
+
+	}
+
+}

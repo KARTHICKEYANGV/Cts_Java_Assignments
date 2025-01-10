@@ -1,0 +1,26 @@
+package com.assignments;
+import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class PrintCapitalLetters {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "Hello World";
+		String regex = "[A-Z]";
+		
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(str);
+		
+		ArrayList<String> countOfCaps = new ArrayList<>();
+		
+		while(matcher.find()) {
+			countOfCaps.add(matcher.group());
+		}
+		for(String s : countOfCaps) {
+			System.out.println(s);
+		}
+	}
+
+}

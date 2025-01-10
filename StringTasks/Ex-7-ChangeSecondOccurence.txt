@@ -1,0 +1,31 @@
+package com.assignments;
+
+public class ConverToUpperCase {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "bvrit college";
+		int n = str.length();
+		int count = 0;
+		for(int i = 0;i<n;i++) {
+			char a = str.charAt(i);
+			if(count == 0) {
+				if(a == 'l') {
+					count++;
+					continue;
+				}
+			}
+			if(a == 'l') {
+				String firstPart = str.substring(0,i);
+				String middle = str.substring(i,i+1).toUpperCase();
+				String lastPart = str.substring(i+1,n);
+				
+				String res = firstPart+middle+lastPart;
+				System.out.println(res);
+				break;
+			}
+		}
+
+	}
+
+}

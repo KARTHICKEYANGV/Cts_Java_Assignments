@@ -1,0 +1,14 @@
+package com.assignments;
+
+public class NumberOfWords {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "Hello Hi World";
+		
+		String res[] = str.split(" ");
+		System.out.println(res.length);
+
+	}
+
+}

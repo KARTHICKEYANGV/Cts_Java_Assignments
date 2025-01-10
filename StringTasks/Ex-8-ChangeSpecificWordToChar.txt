@@ -1,0 +1,17 @@
+package com.assignments;
+
+public class ChangeSpecificWord {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String str = "b.v.raju college";
+		String input = "raju";
+		
+		String res = str.replaceAll("\\b"+input+"\\b", input.toUpperCase());
+		
+		System.out.println(res);
+
+	}
+
+}
